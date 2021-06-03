@@ -7,8 +7,8 @@ const BodyParser      = require('body-parser'),
       mongoose        = require('mongoose'),
       express         =require('express'),
       app             = express();
-
-mongoose.connect("mongodb+srv://amirsg:BJyUPIzDLneGrRFQ@cluster0.c3rvt.mongodb.net/Blog_App", {useNewUrlParser :true , useUnifiedTopology: true });
+//mongodb+srv://amirsg:BJyUPIzDLneGrRFQ@cluster0.c3rvt.mongodb.net/Blog_App
+mongoose.connect("mongodb://localhost:27017/Blog-Pagination", {useNewUrlParser :true , useUnifiedTopology: true });
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(BodyParser.urlencoded({extended:true}));
